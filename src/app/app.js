@@ -1,6 +1,6 @@
-import express from 'express'
-import morgan from 'morgan'
-import cors from 'cors'
+import express from 'express';
+import morgan from 'morgan';
+import cors from 'cors';
 
 
 //importaciones
@@ -12,9 +12,8 @@ import cors from 'cors'
 
 //amparo
 
-
-
-
+import user from '../routes/userRoutes.js'
+import role from "../routes/roleRoutes.js";
 
 
 //maia
@@ -44,7 +43,7 @@ const app = express();
 
 
 app.use(express.json())
-app.use(express.urlencoded({extended:true}))
+app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 app.use(morgan('dev'));
 
@@ -58,6 +57,8 @@ app.use(morgan('dev'));
 //amparo
 
 
+app.use('/api', user);
+app.use('/api', role)
 
 
 
