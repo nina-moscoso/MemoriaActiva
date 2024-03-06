@@ -54,7 +54,7 @@ export const updateUser = async (req, res) => {
         res.status(500).json({ message: "unable to update user", error });
     }
 }
-//para actulizar datos atraves de id usuario
+//para eliminar datos atraves de id usuario
 
 export const deleteUser = async (req, res) => {
     try {
