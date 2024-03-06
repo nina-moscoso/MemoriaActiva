@@ -9,8 +9,7 @@ import '../database/db.js'
 
 //andrea
 
-
-
+import alert from "../routes/alertsRoutes.js";
 
 //amparo
 
@@ -53,7 +52,7 @@ app.use(morgan('dev'));
 
 //andrea
 
-
+app.use('/api', alert)
 
 
 //amparo
